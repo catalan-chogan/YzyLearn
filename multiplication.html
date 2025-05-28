@@ -9,7 +9,10 @@
 </head>
 <body>
   <div id="menu">
-    <h1>Choisis un niveau</h1>
+    <div class="titre-niveau">
+      <a href="index.html"><img src="Img/Back.png" alt="Retour à l'accueil" class="boutonretour"></a>
+      <h1>Choisis un niveau</h1>
+    </div>
     <button onclick="demarrer(1)">Niveau 1 : Table de 10</button>
     <button onclick="demarrer(2)">Niveau 2 : Table de 2</button>
     <button onclick="demarrer(3)">Niveau 3 : Table de 5</button>
@@ -24,6 +27,7 @@
   </div>
 
   <div id="jeu" class="hidden">
+    <a href="index.html"><img src="Img/Back.png" alt="Retour à l'accueil" class="boutonretour"></a>
     <div id="chrono">Temps restant : 60s</div>
     <div id="question"></div>
     <input type="number" id="reponse" onkeydown="if(event.key === 'Enter'){ verifier(); }">
