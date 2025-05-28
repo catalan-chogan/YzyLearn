@@ -126,3 +126,27 @@ button {
   cursor: pointer;
   object-fit: contain;
 }
+
+#feedback-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* fond semi-transparent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#feedback-overlay img {
+  max-width: 60%;
+  max-height: 60%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px white;
+}
+
+.hidden {
+  display: none;
+}

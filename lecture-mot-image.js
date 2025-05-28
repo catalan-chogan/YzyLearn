@@ -45,12 +45,21 @@ function nouvelleQuestion() {
 }
 
 function verifier(choix) {
-  if (choix === motChoisi) {
-    alert("Bravo !");
-  } else {
-    alert("Essaie encore.");
-  }
-  nouvelleQuestion();
+  const estCorrect = choix === motChoisi;
+  afficherFeedbackImage(estCorrect);
+}
+
+function afficherFeedbackImage(reussi) {
+  const overlay = document.getElementById("feedback-overlay");
+  const img = document.getElementById("feedback-image");
+  img.src = reussi ? "Img/gagne.jpg" : "Img/perdu.jpg";
+  overlay.classList.remove("hidden");
+
+  setTimeout(() => {
+    overlay.classList.add("hidden");
+    img.src = "";
+    nouvelleQuestion();
+  }, 2000);
 }
 
 document.addEventListener("DOMContentLoaded", nouvelleQuestion);
