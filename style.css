@@ -7,11 +7,11 @@ body {
 }
 
 h1{
-  font-size: 48px;
+  font-size: 88px;
 }
 
 p{
-  font-size: 32px;
+  font-size: 62px;
 }
 
 .hidden {
@@ -50,8 +50,8 @@ button{
 
 #menu button {
   padding: 10px 20px;
-  font-size: 28px;
-  width: 400px;
+  font-size: 68px;
+  width: 1000px;
   transition: background-color 0.3s;
 }
 
@@ -66,24 +66,24 @@ button{
 }
 
 #chrono {
-  font-size: 24px;
+  font-size: 48px !important;
   margin-bottom: 10px;
 }
 
 #question {
-  font-size: 28px;
+  font-size: 48px !important;
   margin-bottom: 10px;
 }
 
 #reponse {
-  font-size: 24px;
+  font-size: 44px;
   padding: 5px;
   width: 100px;
   margin-bottom: 10px;
 }
 
 button {
-  font-size: 18px;
+  font-size: 48px;
   padding: 8px 16px;
   margin-top: 5px;
   cursor: pointer;
@@ -92,6 +92,7 @@ button {
 #historique, #historique-fin {
   margin: 20px auto;
   text-align: center;
+  font-size: 48px;
   width: 400px;
 }
 
