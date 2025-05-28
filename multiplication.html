@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tables de Multiplications</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="menu">
+    <h1>Choisis un niveau</h1>
+    <button onclick="demarrer(1)">Niveau 1 : Table de 10</button>
+    <button onclick="demarrer(2)">Niveau 2 : Table de 2</button>
+    <button onclick="demarrer(3)">Niveau 3 : Table de 5</button>
+    <button onclick="demarrer(4)">Niveau 4 : Table de 3</button>
+    <button onclick="demarrer(5)">Niveau 5 : Table de 4</button>
+    <button onclick="demarrer(6)">Niveau 6 : Tables 0 à 5</button>
+    <button onclick="demarrer(7)">Niveau 7 : Table de 6</button>
+    <button onclick="demarrer(8)">Niveau 8 : Table de 7</button>
+    <button onclick="demarrer(9)">Niveau 9 : Table de 8</button>
+    <button onclick="demarrer(10)">Niveau 10 : Table de 9</button>
+    <button onclick="demarrer(11)">Niveau 11 : Tables 0 à 10</button>
+  </div>
+
+  <div id="jeu" class="hidden">
+    <div id="chrono">Temps restant : 60s</div>
+    <div id="question"></div>
+    <input type="number" id="reponse" onkeydown="if(event.key === 'Enter'){ verifier(); }">
+    <button onclick="verifier()">Valider</button>
+    <div id="historique"></div>
+  </div>
+
+  <div id="fin" class="hidden">
+    <h2>Fin du jeu</h2>
+    <p id="score"></p>
+    <div id="historique-fin"></div>
+    <button onclick="location.reload()">Rejouer</button>
+  </div>
+</body>
+</html>
