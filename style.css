@@ -11,12 +11,13 @@ body {
 }
 
 button{
-    background-color: 	#2986CC;
-    font-family: 'Fredoka', sans-serif;
-    color: white;
-    cursor: pointer;
+  background-color: 	#2986CC;
+  font-family: 'Fredoka', sans-serif;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+  border: none;
 }
-
 
 #menu {
   display: flex;
@@ -24,8 +25,6 @@ button{
   align-items: center;
   gap: 5px;
   margin-top: 20px;
-  border-radius: 3px;
-  border: none;
 }
 
 .titre-niveau {
