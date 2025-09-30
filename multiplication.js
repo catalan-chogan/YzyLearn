@@ -31,7 +31,7 @@ function genererQuestions(niveau) {
       tables = [4];
       break;
     case 6:
-      tables = [0, 1, 2, 3, 4, 5];
+      tables = [2, 3, 4, 5];
       break;
     case 7:
       tables = [6];
@@ -46,7 +46,7 @@ function genererQuestions(niveau) {
       tables = [9];
       break;
     case 11:
-      tables = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      tables = [2, 3, 4, 5, 6, 7, 8, 9, 10];
       break;
   }
 
