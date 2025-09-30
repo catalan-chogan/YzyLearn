@@ -151,3 +151,9 @@ button {
 .hidden {
   display: none;
 }
+
+.resultat-image {
+  margin-top: 10px;
+  max-width: 90%;
+  border-radius: 10px;
+}

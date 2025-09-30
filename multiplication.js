@@ -52,7 +52,7 @@ function genererQuestions(niveau) {
 
   for (let i = 0; i < 100; i++) {
     let a = tables[Math.floor(Math.random() * tables.length)];
-    let b = Math.floor(Math.random() * 11);
+    let b = Math.floor(Math.random() * 9) + 2; // génère un nombre entre 2 et 10
     questions.push({ a, b });
   }
 }
@@ -97,6 +97,31 @@ function updateChrono() {
 function finDuJeu() {
   document.getElementById("jeu").classList.add("hidden");
   document.getElementById("fin").classList.remove("hidden");
+
+  // Afficher le texte du score
   document.getElementById("score").textContent = `Tu as trouvé ${bonnesReponses} bonne(s) réponse(s) sur ${index} questions.`;
+
+  // Sélection de l'image en fonction du nombre de bonnes réponses
+  let imageSrc = "";
+  if (bonnesReponses < 5) {
+    imageSrc = "Img/PopDemonHunter/0.jpeg";
+  } else if (bonnesReponses < 10) {
+    imageSrc = "Img/PopDemonHunter/5.jpeg";
+  } else if (bonnesReponses < 15) {
+    imageSrc = "Img/PopDemonHunter/10.jpeg";
+  } else {
+    imageSrc = "Img/PopDemonHunter/15.jpeg";
+  }
+
+  // Création de l'image et ajout sous le score
+  let img = document.createElement("img");
+  img.src = imageSrc;
+  img.alt = "Image de résultat";
+  img.classList.add("resultat-image"); // optionnel pour le style (CSS)
+
+  document.getElementById("score").appendChild(document.createElement("br"));
+  document.getElementById("score").appendChild(img);
+
+  // Récupérer l’historique
   document.getElementById("historique-fin").innerHTML = document.getElementById("historique").innerHTML;
 }
