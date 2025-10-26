@@ -139,14 +139,18 @@ button {
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  border-radius: 20px;
 }
 
 #feedback-overlay img {
-  max-width: 60%;
-  max-height: 60%;
-  border-radius: 15px;
-  box-shadow: 0 0 20px white;
+  width: 600px;      /* largeur fixe */
+  height: 400px;     /* hauteur fixe */
+  object-fit: contain; /* conserve les proportions */
+  display: block;
+  border-radius: 20px;
 }
+
+
 
 .hidden {
   display: none;
