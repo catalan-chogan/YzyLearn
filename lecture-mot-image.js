@@ -37,7 +37,7 @@ const niveaux = {
       "Catapulte": "Img/lecture-mots/niv2/catapulte.png",
       "Robot": "Img/lecture-mots/niv2/robot.png",
       "Usine": "Img/lecture-mots/niv2/usine.png",
-      "Nuage": "Img/lecture-mots/niv2/Nnuage.png",
+      "Nuage": "Img/lecture-mots/niv2/nuage.png",
       "Valise": "Img/lecture-mots/niv2/valise.png",
       "Lavabo": "Img/lecture-mots/niv2/lavabo.png",
       "Porte": "Img/lecture-mots/niv2/porte.png",
