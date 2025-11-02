@@ -161,3 +161,94 @@ button {
   max-width: 90%;
   border-radius: 10px;
 }
+
+/* =====================================
+   Styles spécifiques à la table de rappel
+   ===================================== */
+#table-rappel-app {
+  font-family: 'Fredoka', sans-serif;
+  text-align: center;
+  background-color: #EAF7FF;
+  padding: 20px;
+}
+
+/* MENU */
+#table-rappel-app #menu button {
+  background-color: #2986CC;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 48px;
+  padding: 10px 20px;
+  margin: 5px;
+}
+#table-rappel-app #menu button:hover {
+  background-color: #145A9E;
+}
+
+/* CHRONO, MOT, HISTORIQUE */
+#table-rappel-app #chrono {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+#table-rappel-app #mot-a-trouver {
+  font-size: 72px;
+  margin-bottom: 10px;
+}
+#table-rappel-app #historique {
+  margin: 20px auto;
+  font-size: 48px;
+  width: 400px;
+}
+#table-rappel-app .historique-correct { color: green; font-weight: bold; }
+#table-rappel-app .historique-faux { color: red; font-weight: bold; }
+
+/* GRILLE 2x4 IMAGES */
+#table-rappel-app #images-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+  grid-auto-rows: 150px; /* hauteur fixe pour chaque ligne */
+  gap: 1px;
+  width: 80%;
+  max-width: 1000px; /* pour ne pas dépasser l'écran */
+  margin: 20px auto;
+}
+
+#table-rappel-app .image-option {
+  width: 100%;      /* occupe toute la colonne */
+  height: 100%;     /* occupe toute la ligne */
+  object-fit: contain;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+/* FEEDBACK */
+#table-rappel-app #feedback-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+#table-rappel-app #feedback-overlay img {
+  width: 600px;
+  height: 400px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+/* MASQUE / HIDDEN */
+#table-rappel-app .hidden {
+  display: none !important;
+}
+
+#table-rappel-app .image-option {
+  max-width: 25%;
+}
+

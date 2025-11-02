@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Table de rappel</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="table-de-rappel.js"></script>
+</head>
+<body>
+
+<div id="table-rappel-app">
+
+  <!-- MENU PRINCIPAL -->
+  <div id="menu">
+    <h1>Table de rappel</h1>
+    <h2>Choisis ton niveau :</h2>
+    <div id="boutons-niveaux" style="margin-bottom: 20px;"></div>
+    <button id="start-btn">Commencer</button>
+  </div>
+
+  <!-- ZONE DE JEU -->
+  <div id="jeu" class="hidden">
+    <div id="chrono">60</div>
+    <div id="question">Quel est le mot du nombre :</div>
+    <div id="mot-a-trouver"></div>
+    <div id="images-container"></div>
+    <div id="historique"></div>
+  </div>
+
+  <!-- ÉCRAN DE FIN -->
+  <div id="fin" class="hidden">
+    <h1>Temps écoulé !</h1>
+    <p id="resultat"></p>
+    <button id="restart-btn">Rejouer</button>
+  </div>
+
+  <!-- FEEDBACK (BON / FAUX) -->
+  <div id="feedback-overlay" class="hidden">
+    <img id="feedback-img" src="" alt="">
+  </div>
+
+</div>
+
+</body>
+</html>
