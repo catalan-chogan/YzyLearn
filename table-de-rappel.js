@@ -1,4 +1,3 @@
-const startBtn = document.getElementById("start-btn");
 const restartBtn = document.getElementById("restart-btn");
 const menu = document.getElementById("menu");
 const jeu = document.getElementById("jeu");
@@ -32,13 +31,17 @@ function selectionnerNiveau(niveau) {
   niveauSelectionne = niveau;
   maxNombre = niveau * 10 - 1;
   if (maxNombre > 99) maxNombre = 99;
+
+  // Changer le style des boutons
   document.querySelectorAll("#boutons-niveaux button").forEach(btn => {
     btn.style.backgroundColor = "#2986CC";
   });
   document.querySelector(`#boutons-niveaux button:nth-child(${niveau})`).style.backgroundColor = "#145A9E";
+
+  // Lancer le jeu directement après avoir choisi le niveau
+  demarrerJeu();
 }
 
-// Retourne un entier aléatoire entre 0 et max
 function randInt(max) {
   return Math.floor(Math.random() * (max + 1));
 }
@@ -114,6 +117,7 @@ function finDuJeu() {
   resultat.textContent = `Bravo ! Tu as trouvé ${score} bonnes réponses 🎯 (Niveau ${niveauSelectionne})`;
 }
 
-selectionnerNiveau(1);
-startBtn.addEventListener("click", demarrerJeu);
 restartBtn.addEventListener("click", demarrerJeu);
+
+// Initialisation du niveau 1
+//selectionnerNiveau(1);
